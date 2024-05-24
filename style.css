@@ -1,36 +1,97 @@
-.clockContainer{
-    height: 90vh;
-    width: 90vh;
-    margin: auto;
-    border: 2px blue solid;
-    background-image: url(Analogue_clock.png);
-    background-size: 100%;
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
 }
 
-.hand{
-    position: absolute;
-    background-color: black;
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #2980b9, #2c3e50); 
+    color: #fff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    height: 5rem;
+    color: #fff;
+    text-align: center;
+    line-height: 5rem;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
     border-radius: 10px;
-    transform-origin: bottom;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
-.hour{
-    height: 32%;
-    width: 1%;
-    top: 16%;
-    left: 49.5%;
+input {
+    height: 3rem;
+    width: calc(100% - 2rem); /* Adjusting the width to fit inside the container */
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: right;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+    transition: box-shadow 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
 }
 
-.minute{
-    height: 34.5%;
-    width: 0.7%;
-    top: 16%;
-    left: 49.5%;
+input:focus {
+    outline: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-.second{
-    height: 37%;
-    width: 0.4%;
-    top: 12%;
-    left: 49.5%;
+.buttons {
+    width: 100%;
+}
+
+button {
+    height: 4rem; /* Slightly taller buttons */
+    width: 4rem; /* Slightly wider buttons */
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 1.5rem; /* Larger font size for better readability */
+    background-color: #e0e0e0; /* Light gray background for buttons */
+    color: #000; /* Black text color for buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #d5d5d5; /* Slightly darker background color on hover */
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #ccc; /* Darker background color when active */
+    transform: scale(1);
+}
+
+#AC, #zero, #equal {
+    background-color: #eb9b34; /* Red color for specific buttons */
+    color: #fff; /* White text color for better contrast */
+    width: 8.9rem;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
 }
